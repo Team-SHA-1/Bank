@@ -6,7 +6,7 @@ class Account(models.Model):
     Name = models.CharField(max_length=100)
     Email = models.EmailField(unique=True)
     Phone_Number = models.IntegerField(unique=True)
-    Account_Number = models.CharField(max_length = 100,primary_key = True,default = uuid.uuid4)
+    Account_Number = models.CharField(max_length = 100,default = uuid.uuid4)
     Bank_Name = models.CharField(max_length=100)
     Branch_Name = models.CharField(max_length=100)
     Montly_Income = models.DecimalField(max_digits=10, decimal_places=2,)
