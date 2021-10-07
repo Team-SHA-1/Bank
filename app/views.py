@@ -26,7 +26,7 @@ class PhotoAPI(APIView):
 
     def post(self,request,format=None):
         pk = request.data["Account_Number"]
-        account = Account.objects.get(pk=pk)
+        account = Account.objects.get(Account_Number=pk)
         if account is None:
             return Response({'err':'Account not found'}, status=status.HTTP_404_NOT_FOUND)
         serializer = AccountSerializer(account)
@@ -37,9 +37,8 @@ class DataRetriveAPI(APIView):
     permission_classes = (IsAuthenticated,)
 
     def post(self,request,format=None):
-        print(request.POST["Account_Number"])
         pk = request.data["Account_Number"]
-        account = Account.objects.get(pk=pk)
+        account = Account.objects.get(Account_Number=pk)
         if account is None:
             return Response({'err':'Account not found'}, status=status.HTTP_404_NOT_FOUND)
             
