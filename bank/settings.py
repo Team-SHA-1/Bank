@@ -26,7 +26,7 @@ SECRET_KEY = '*9!ds4+q7g_n%wk59ppebdn^s044(^%#msb4ssni%jcz5=k%^k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bank-for-canfirm.herokuapp.com','127.0.0.1']
 
 
 # Application definition
